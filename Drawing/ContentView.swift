@@ -34,8 +34,8 @@ struct Arc: InsettableShape {
 
 struct ContentView: View {
     var body: some View {
-        Arc(startAngle: .degrees(-90), endAngle: .degrees(90), clockWise: true)
-            .strokeBorder(.blue, lineWidth: 10)
+        Text("Hello, world!")
+            .padding()
     }
 }
 
