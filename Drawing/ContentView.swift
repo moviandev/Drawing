@@ -10,6 +10,11 @@ import SwiftUI
 struct Trapezoid: Shape {
     var insetAmount: Double
     
+    var animatableData: Double {
+        get { insetAmount }
+        set { insetAmount = newValue}
+    }
+    
     func path(in rect: CGRect) -> Path {
         var path = Path()
         
@@ -30,7 +35,9 @@ struct ContentView: View {
         Trapezoid(insetAmount: insetAmount)
             .frame(width: 200, height: 200)
             .onTapGesture {
-                insetAmount = Double.random(in: 10...90)
+                withAnimation {
+                    insetAmount = Double.random(in: 10...90)
+                }
             }
     }
 }
