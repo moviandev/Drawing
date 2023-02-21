@@ -24,11 +24,14 @@ struct Trapezoid: Shape {
 }
 
 struct ContentView: View {
-    @State private var amount = 0.0
+    @State private var insetAmount = 50.0
     
     var body: some View {
-        Text("Hello, world")
-            .padding()
+        Trapezoid(insetAmount: insetAmount)
+            .frame(width: 200, height: 200)
+            .onTapGesture {
+                insetAmount = Double.random(in: 10...90)
+            }
     }
 }
 
