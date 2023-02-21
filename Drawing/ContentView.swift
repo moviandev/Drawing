@@ -11,10 +11,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Image("example")
-            
-            Rectangle()
-                .fill(.red)
-                .blendMode(.multiply)
+                .colorMultiply(.red)
         }
         .ignoresSafeArea()
     }
