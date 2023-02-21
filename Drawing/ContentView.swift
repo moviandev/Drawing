@@ -14,19 +14,19 @@ struct ContentView: View {
         VStack {
             ZStack {
                 Circle()
-                    .fill(.red)
+                    .fill(Color(red: 1, green: 0, blue: 0))
                     .frame(width: 200 * amount)
                     .offset(x: -50, y: -80)
                     .blendMode(.screen)
                 
                 Circle()
-                    .fill(.green)
+                    .fill(Color(red: 0, green: 1, blue: 0))
                     .frame(width: 200 * amount)
                     .offset(x: 50, y: -80)
                     .blendMode(.screen)
                 
                 Circle()
-                    .fill(.blue)
+                    .fill(Color(red: 0, green: 0, blue: 1))
                     .frame(width: 200 * amount)
                     .blendMode(.screen)
             }
